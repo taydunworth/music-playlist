@@ -17,7 +17,7 @@ class PlayListItem extends Component {
   render() {
     let songs = this.state.songs.map(song => {
       return (
-        <div key={song._id}>
+        <div className="songCard" key={song._id}>
           <p>User: {song.userName}</p>
           <p>Artist/Band: {song.songArtist}</p>
           <p>Title: {song.songTitle}</p>
@@ -26,8 +26,8 @@ class PlayListItem extends Component {
       )
     })
     return (
-      <div>
-        <div className="row">{songs}</div>
+      <div className="listOfSongs">
+        {songs}
       </div>
     )
   }

@@ -52,7 +52,7 @@ export default class PlayListForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="formBox">
         <form>
           <label htmlFor="userName">Username</label>
           <input type="text" onChange={this._change} name="userName"  value={this.state.userName} />

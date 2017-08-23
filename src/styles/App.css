@@ -1,17 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,600');
+
 .App {
   text-align: center;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.content {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0px auto;
+  padding: 30px 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  background-image: url('../images/Headphones-Computer.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 400px;
+}
+
+.title {
+  width: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  text-align: right;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 4em;
+  text-transform: lowercase;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.formBox {
+  width: 40%;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   text-align: left;
 }
 
 form label {
-  padding-top: 20px;
+  padding: 20px 0 5px;
   text-transform: lowercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+input[type="text"], textarea {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #999;
+  box-shadow: none;
+}
+
+input[type="text"]:focus, textarea:focus {
+  outline: 0;
+}
+
+textarea {
+  height: 100px;
 }
 
 .btn-box {
@@ -22,4 +85,21 @@ form label {
 
 button {
   width: 30%;
+}
+
+.listOfSongs {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  flex-wrap: wrap;
+}
+
+.songCard {
+  width: 100%;
+  background-color: #333;
+  border-right: 30px solid #75A095;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #fff;
 }
