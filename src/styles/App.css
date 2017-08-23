@@ -80,8 +80,14 @@ input[type="text"], textarea {
   box-shadow: none;
 }
 
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus, textarea:focus, button:focus {
   outline: 0;
+}
+
+button:hover {
+  background-color: #75A095;
+  -webkit-transition: ease-in-out background-color .3s;
+  transition: ease-in-out background-color .3s;
 }
 
 textarea {
@@ -124,7 +130,7 @@ button {
 }
 
 .songCard p {
-  padding: 20px 0 5px;
+  padding: 10px 0 5px;
   text-transform: uppercase;
   font-weight: 300;
   font-size: .8em;

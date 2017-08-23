@@ -54,7 +54,7 @@ export default class PlayListForm extends Component {
     return (
       <div className="formBox">
         <h2>Add to the Playlist</h2>
-        <form>
+        <form onSubmit={this.addToList}>
           <label htmlFor="userName">Username</label>
           <input type="text" onChange={this._change} name="userName"  value={this.state.userName} />
           <label htmlFor="songArtist">Artist/Band</label>

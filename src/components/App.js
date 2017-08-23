@@ -6,12 +6,18 @@ import PlayListForm from './PlayListForm';
 import PlayListItem from './PlayListItem';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      songs: [],
+    }
+  }
   render() {
     return (
       <div className="App">
         <NavBar />
         <PlayList>
-          <PlayListForm />
+          <PlayListForm songs={this.state.songs} />
           <PlayListItem />
         </PlayList>
       </div>
