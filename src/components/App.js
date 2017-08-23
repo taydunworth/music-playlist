@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/App.css';
 import NavBar from './NavBar';
 import PlayList from './PlayList';
 import PlayListForm from './PlayListForm';

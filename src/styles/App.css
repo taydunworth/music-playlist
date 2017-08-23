@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: left;
+}
+
+form label {
+  padding-top: 20px;
+  text-transform: lowercase;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 30%;
+}
