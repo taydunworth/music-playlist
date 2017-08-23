@@ -18,10 +18,11 @@ class PlayListItem extends Component {
     let songs = this.state.songs.map(song => {
       return (
         <div className="songCard" key={song._id}>
-          <p>User: {song.userName}</p>
-          <p>Artist/Band: {song.songArtist}</p>
-          <p>Title: {song.songTitle}</p>
-          <p>Notes: {song.songNotes}</p>
+          <h3><i className="fa fa-music" aria-hidden="true"></i></h3>
+          <p><strong>User:</strong> {song.userName}</p>
+          <p><strong>Artist/Band:</strong> {song.songArtist}</p>
+          <p><strong>Song Title:</strong> {song.songTitle}</p>
+          <p><strong>Notes:</strong> {song.songNotes}</p>
         </div>
       )
     })

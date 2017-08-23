@@ -1,17 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 
 .App {
   text-align: center;
   width: 100%;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: #26211F;
 }
 
 .content {
   display: flex;
   width: 80%;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0px auto;
   padding: 30px 0;
+}
+
+h2 {
+  text-align: left;
+  text-transform: lowercase;
+  font-size: 2em;
+  margin: 10px 0 0;
+  letter-spacing: 1px;
 }
 
 .header {
@@ -36,7 +47,7 @@
 
 .title h1 {
   margin: 0;
-  padding: 10px;
+  padding: 10px 60px 10px 0;
   font-size: 4em;
   text-transform: lowercase;
   font-weight: 100;
@@ -44,7 +55,7 @@
 }
 
 .formBox {
-  width: 40%;
+  width: 80%;
 }
 
 form {
@@ -56,16 +67,16 @@ form {
 
 form label {
   padding: 20px 0 5px;
-  text-transform: lowercase;
-  font-weight: 400;
-  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8em;
   letter-spacing: 2px;
 }
 
 input[type="text"], textarea {
   border-radius: 5px;
   padding: 5px;
-  border: 1px solid #999;
+  border: 1px solid #26211F;
   box-shadow: none;
 }
 
@@ -84,22 +95,61 @@ textarea {
 }
 
 button {
-  width: 30%;
+  width: auto;
+  background-color: transparent;
+  border: 1px solid #26211F;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .listOfSongs {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 80%;
   flex-wrap: wrap;
+  padding-top: 40px;
 }
 
 .songCard {
-  width: 100%;
-  background-color: #333;
+  width: 85%;
+  background-color: #26211F;
   border-right: 30px solid #75A095;
   padding: 20px;
   margin-bottom: 30px;
   text-align: left;
   color: #fff;
+}
+
+.songCard p {
+  padding: 20px 0 5px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: .8em;
+  letter-spacing: 2px;
+}
+
+@media ( min-width: 800px )  {
+  .content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  .formBox {
+    width: 40%;
+  }
+
+  .listOfSongs {
+    width: 40%;
+    padding-top: 0;
+  }
+
+  .songCard {
+    width: 85%;
+  }
 }
