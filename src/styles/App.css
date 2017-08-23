@@ -131,6 +131,12 @@ button {
   letter-spacing: 2px;
 }
 
+.songCard h3 i {
+  background-color: #75A095;
+  border-radius: 100%;
+  padding: 8px;
+}
+
 @media ( min-width: 800px )  {
   .content {
     display: flex;
