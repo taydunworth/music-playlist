@@ -117,6 +117,12 @@ button {
   width: 80%;
   flex-wrap: wrap;
   padding-top: 40px;
+  align-items: flex-end;
+}
+
+.listOfSongs button {
+  width: auto;
+  margin-bottom: 20px;
 }
 
 .songCard {

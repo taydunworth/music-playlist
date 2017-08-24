@@ -9,27 +9,10 @@ export default class PlayListForm extends Component {
       songTitle: '',
       songNotes: ''
     }
-    this.fetchData = this.fetchData.bind(this);
   }
 
-  _change = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  fetchData(e) {
-   e.preventDefault();
-   fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
-     return results.json();
-   }).then(data => {
-     this.setState({songs: data});
-   })
-  }
-
-  addToList(e) {
+  addToList = e => {
     e.preventDefault();
-    this.setState({userName: e.target.value, songTitle: e.target.value, songArtist: e.target.value, songNotes: e.target.value});
     let listItem = JSON.stringify(this.state);
 
     fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting", {
@@ -50,22 +33,27 @@ export default class PlayListForm extends Component {
     this.setState({userName: '', songArtist: '', songTitle: '', songNotes:''});
   }
 
+  _change = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   render() {
     return (
       <div className="formBox">
         <h2>Add to the Playlist</h2>
         <form onSubmit={this.addToList}>
           <label htmlFor="userName">Username</label>
-          <input type="text" onChange={this._change} name="userName"  value={this.state.userName} />
+          <input type="text" onChange={this._change} name="userName"  value={this.state.userName} required />
           <label htmlFor="songArtist">Artist/Band</label>
-          <input type="text" onChange={this._change} name="songArtist"  value={this.state.songArtist} />
+          <input type="text" onChange={this._change} name="songArtist"  value={this.state.songArtist} required />
           <label htmlFor="songTitle">Song Title</label>
-          <input type="text" onChange={this._change} name="songTitle"  value={this.state.songTitle} />
+          <input type="text" onChange={this._change} name="songTitle"  value={this.state.songTitle} required />
           <label htmlFor="songNotes">Notes about Song</label>
           <textarea onChange={this._change} name="songNotes"  value={this.state.songNotes} />
           <div className="btn-box">
-            <button onClick={this.fetchData}>Submit</button>
-            <button onClick={this.addToList}>Update</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </div>

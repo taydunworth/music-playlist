@@ -16,10 +16,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <PlayList>
-          <PlayListForm songs={this.state.songs} />
-          <PlayListItem />
-        </PlayList>
+        <div className="content">
+          <PlayListForm />
+          <PlayList />
+        </div>
       </div>
     );
   }
