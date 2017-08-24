@@ -53,7 +53,7 @@ export default class PlayListForm extends Component {
           <label htmlFor="songNotes">Notes about Song</label>
           <textarea onChange={this._change} name="songNotes"  value={this.state.songNotes} />
           <div className="btn-box">
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Song</button>
           </div>
         </form>
       </div>

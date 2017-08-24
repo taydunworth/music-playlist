@@ -33,7 +33,7 @@ export default class PlayList extends Component {
 
     return (
         <div className="listOfSongs">
-          <button onClick={this.fetchData}>Update</button>
+          <button onClick={this.fetchData}>Update Playlist</button>
           {songs}
         </div>
     )
