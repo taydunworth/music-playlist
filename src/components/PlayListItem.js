@@ -21,7 +21,7 @@ class PlayListItem extends Component {
           <h3><i className="fa fa-music" aria-hidden="true"></i></h3>
           <p><strong>User:</strong> {song.userName}</p>
           <p><strong>Artist/Band:</strong> {song.songArtist}</p>
-          <p><strong>Song Title:</strong> {song.songTitle}</p>
+          <p><strong>Song Title:</strong> "{song.songTitle}"</p>
           <p><strong>Notes:</strong> {song.songNotes}</p>
         </div>
       )
